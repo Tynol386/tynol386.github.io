@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>77 Chimera</title>
+    <link rel="stylesheet" href="projekty_szczegoly.css">
+</head>
+<body>
+    <script src=".\zdjecia.js"></script>
+    <header class="header">
+        <div class="container">
+            <img class="thumbnail-image" src=".\img\77chimera\77chimera.png" alt="thumbnail-image">
+            <h1>Strona dla drużyny harcerskiej</h1>
+            <a href="projekty.html" class="btn primary">Inne Projekty</a>
+            <a href="https://github.com/Tynol386/Strona-Chimery" target="_blank" class="btn secondary">Projekt na GitHub-ie</a>
+        </div>
+    </header>
+    <section class="project">
+        <div class="container">
+            <div class="project-card">
+                <h2>Opis</h2>
+                <h3>Technologie: PHP / JS / HTML / CSS / MARIADB</h3>
+                <p>Strona została stworzona ze względu na potrzebę zwiększenia popularności drużyny wędrowniczej "Chimera". Strona jest typu full stack i nie posiada żadnych frameworków. Do zbudowania strony
+                    użyłem języków PHP,JS,HTML,CSS a także logicznego połączenia z relecajną bazą danych MariaDB (kompatybilną z MySQL). Strona zawiera system logowania, pisania wiadomości między użytkownikami,
+                    zintegrowanego kalendarza google, ustawień konta, zakładki z ważnymi dokumentami, możliwością dodawania punktów za aktywność i inne sprawności harcerskie, śpiewnik a także admin panel do którego
+                    dostęp jest walidowany. Z poziomu admin panelu, admin ma możliwość dodawania i usuwania postów, dodawania lub usuwania użytkowników a także wglądu i moderacji wiadomości wysyłanych na stronie.
+                    Strona upadła ze względu na brak kontaktu z osobą hostującą stronę i brak osoby która była chętna stronę prowadzić poprzez regularne dodawanie postów o zbiórkach. Jednak projekt ten nauczył mnie bardzo dużo
+                    i jestem zadowolony z finalnej wersji.
+                </p>
+            </div>
+            <div class="project-card">
+                <div class="gallery-container">
+                    <h2>Galeria zdjęć</h2>
+                    <div class="gallery-grid">
+                        <img src=".\img\77chimera\zhp1.png" alt="Strona główna" class="gallery-item">
+                        <img src=".\img\77chimera\zhp2.png" alt="Widok głównego panelu po zalogowaniu" class="gallery-item">
+                        <img src=".\img\77chimera\zhp3.png" alt="Admin panel z włączonym ciemnym widokiem" class="gallery-item">
+                        <img src=".\img\77chimera\zhp4.png" alt="Widok na zaimplementowany kalendarz google" class="gallery-item">
+                        <img src=".\img\77chimera\zhp5.png" alt="Ekran logowania" class="gallery-item">
+                        <img src=".\img\77chimera\zhp6.png" alt="Strona FAQ" class="gallery-item">
+                        <img src=".\img\77chimera\zhp7.png" alt="Przeglądarka postów" class="gallery-item">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Tynol386.</p>
+        </div>
+    </footer>
+    <div id="lightbox" class="lightbox">
+  <span class="close-btn">&times;</span>
+  <button class="nav-btn prev-btn">&#10094;</button>
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="" alt="">
+    <div id="lightbox-caption"></div>
+  </div>
+  <button class="nav-btn next-btn">&#10095;</button>
+</div>
+</body>
+</html>

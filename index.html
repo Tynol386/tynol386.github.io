@@ -1,26 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl-PL">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pusta strona</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-    h1{
-      color: white;
-      font-size: 30px;
-    }
-    body
-    {
-      background-color: black;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tymon Ziemkiewicz</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <center><h1>GITHUB  TEST</h1></center>
+    <header class="header">
+        <div class="container">
+            <h1>Cześć, jestem <span class="highlight">Tymon</span></h1>
+            <p class="subtitle">Programista & Pasjonat IT</p>
+            <p class="tagline">Rozwijam pasję do kodu od 15. roku życia. Buduję aplikacje mobilne i desktopowe, witryny i aplikacje webowe oraz hobbystycznie gry 2D/3D.</p>
+            <div class="cta-buttons">
+                <a href=".\projekty.html" class="btn primary">Zobacz Projekty</a>
+                <a href="https://github.com/Tynol386" target="_blank" class="btn secondary">Mój GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="container">
+            <h2>O mnie & Umiejętności</h2>
+            <p>Skończyłem technikum jako Technik Programista (INF.03, INF.04). Zawsze staram się rozwijać w różnych technologiach i samodzielnie zdobywać nową wiedzę.</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card"><span>C# / .NET / Unity</span></div>
+                <div class="skill-card"><span>Dart / Flutter / Kotlin</span></div>
+                <div class="skill-card"><span>PHP / JS / SQL</span></div>
+                <div class="skill-card"><span>Automatyzacja (RPA)</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projekty" class="projects-section">
+        <div class="container">
+            <h2>Wybrane Projekty i Sukcesy</h2>
+            <div class="projects-grid">
+                <a href="mwolontariat.html">
+                <div class="project-card highlight-card">
+                    <h3>Aplikacja mWolontariat (Flutter)</h3>
+                    <p>Aplikacja mobilna na Androida stworzona w 4-osobowym zespole na ogólnopolski konkurs <strong>HackHeroes</strong>.</p>
+                </div></a>
+                <a href="77chimera.html">
+                <div class="project-card">
+                    <h3>Strona dla Drużyny Harcerskiej</h3>
+                    <p>Autorski system Full-Stack (PHP, Vanilla JS, MariaDB) z panelem CMS wdrożony dla lokalnej społeczności.</p>
+                </div></a>
+                <a href="uipath.html">
+                <div class="project-card">
+                    <h3>Bot dla B. Braun (III Miejsce)</h3>
+                    <p>Automatyzacja procesów (RPA) w UiPath – bot do masowego uploadu wideo na YouTube bezpośrednio z dysku.</p>
+                </div></a>
+                <a href="projekty.html"><h3>Zobacz wszystkie projekty &#x2192;</h3></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="game-section">
+        <div class="container">
+            <h2>Zagraj w moją grę bezpośrednio tutaj!</h2>
+            <p>Moja pierwsza ukończona gra platformowa 2D w Unity. <a href="">Więcej szczegółów tutaj</a></p>
+            <div class="game-wrapper">
+                <iframe src="https://tynol386.github.io/hellman_1.2_webgl/" title="Unity WebGL Game"></iframe>
+            </div>
+            
+            <div class="controls">
+                <p><strong>Sterowanie:</strong> A / D lub Strzałki (Poruszanie), Spacja (Skok), LPM (strzał), Enter (Pominięcie dialogu)</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Tynol386.</p>
+        </div>
+    </footer>
 </body>
 </html>
