@@ -1,45 +1,57 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const lightboxCaption = document.getElementById("lightbox-caption");
-  
-  let currentImages = [];
-  let currentIndex = 0;
 
-  document.querySelectorAll(".gallery-container").forEach(container => {
-    const images = Array.from(container.querySelectorAll(".gallery-item"));
+const lightbox = document.getElementById("lightbox");
+
+const lightboxZdjecie = document.getElementById("lightbox-img");
+
+const lightboxPodpis = document.getElementById("lightbox-caption");
+
+let wybranezdjecia = [];
+
+let wybranyIndex = 0;
+
+document.querySelectorAll(".gallery-container").forEach(container => {
+
+const zdjecia = Array.from(container.querySelectorAll(".gallery-item"));
     
-    images.forEach((img, index) => {
-      img.addEventListener("click", () => {
-        currentImages = images; 
-        currentIndex = index;
-        showImage();
-        lightbox.style.display = "flex";
-      });
+zdjecia.forEach((img, index) => {
+
+  img.addEventListener("click", () => {
+    wybranezdjecia = zdjecia; 
+    wybranyIndex = index;
+    pokazZdjecie();
+    lightbox.style.display = "flex";
+
     });
+
   });
 
-  function showImage() {
-    const activeImg = currentImages[currentIndex];
-    lightboxImg.src = activeImg.src;
-    lightboxCaption.textContent = activeImg.alt || `Zdjęcie ${currentIndex + 1}`;
-  }
+});
 
-  document.querySelector(".next-btn").addEventListener("click", (e) => {
+function pokazZdjecie() {
+    const wybraneZdjecie = wybranezdjecia[wybranyIndex];
+    lightboxZdjecie.src = wybraneZdjecie.src;
+    lightboxPodpis.textContent = wybraneZdjecie.alt || `Zdjęcie ${wybranyIndex + 1}`;
+}
+
+document.querySelector(".next-btn").addEventListener("click", (e) => {
     e.stopPropagation();
-    currentIndex = (currentIndex + 1) % currentImages.length;
-    showImage();
-  });
+    wybranyIndex = (wybranyIndex + 1) % wybranezdjecia.length;
+    pokazZdjecie();
+});
 
-  document.querySelector(".prev-btn").addEventListener("click", (e) => {
+document.querySelector(".prev-btn").addEventListener("click", (e) => {
     e.stopPropagation();
-    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-    showImage();
-  });
+    wybranyIndex = (wybranyIndex - 1 + wybranezdjecia.length) % wybranezdjecia.length;
+    pokazZdjecie();
+});
 
-  const closeLightbox = () => lightbox.style.display = "none";
-  document.querySelector(".close-btn").addEventListener("click", closeLightbox);
-  lightbox.addEventListener("click", closeLightbox);
+const closeLightbox = () => lightbox.style.display = "none";
 
-  lightboxImg.addEventListener("click", (e) => e.stopPropagation());
+document.querySelector(".close-btn").addEventListener("click", closeLightbox);
+
+lightbox.addEventListener("click", closeLightbox);
+
+lightboxZdjecie.addEventListener("click", (e) => e.stopPropagation());
+
 });

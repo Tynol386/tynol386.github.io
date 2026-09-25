@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+.highlight {
+    color: #38bdf8;
+}
+.subtitle {
+    font-size: 1.5rem;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+.tagline {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    color: #cbd5e1;
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f8fafc;
+    border-left: 4px solid #38bdf8;
+    padding-left: 15px;
+}
+.header {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    text-align: center;
+    padding: 100px 0;
+    border-bottom: 1px solid #334155;
+}
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+.btn.primary {
+    background-color: #38bdf8;
+    color: #0f172a;
+}
+.btn.primary:hover {
+    background-color: #7dd3fc;
+    transform: translateY(-2px);
+}
+.btn.secondary {
+    background-color: #334155;
+    color: #f8fafc;
+}
+.btn.secondary:hover {
+    background-color: #475569;
+    transform: translateY(-2px);
+}
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+}
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 30px;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+.nav-btn:hover { 
+    background: rgba(255, 255, 255, 0.3); 
+}
+.prev-btn { 
+    left: 20px; 
+}
+.next-btn { 
+    right: 20px; 
+}
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #64748b;
+    border-top: 1px solid #334155;
+    font-size: 0.9rem;
+}
